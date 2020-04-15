@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FCC Node Exercise Tracker</title>
+</head>
+<body>
+<h1>FCC Node Exercise Tracker</h1>
+<form action="/api/exercise/new-user" method="post">
+    <h2>Create a new user</h2>
+    <p><code>POST /api/exercise/new-user</code></p>
+    <input type="text" id="username" name="username" placeholder="username">
+    <input type="submit" value="Submit">
+</form>
+<form action="/api/exercise/add" method="post">
+    <h2>Add exercise</h2>
+    <p><code>POST /api/exercise/add</code></p>
+    <input id="userId" type="text" name="userId" placeholder='userId*'>
+    <input id="description" type="text" name="description" placeholder="description*">
+    <input id="duration" type="text" name="duration" placeholder="duration* (mins.)">
+    <input id="date" type="text" name="date" placeholder="date (yyyy-mm-dd)">
+    <input type="submit" value="Submit">
+</form>
+<p><strong>GET users's exercise log: </strong><code>GET
+    /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
+<p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+<p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+
+<hr>
+<p>by <a href="https://varunbarad.com">Varun Barad</a></p>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        text-align: center;
+        max-width: 60vw;
+        margin: auto;
+        background: black;
+        font-size: 1.2rem;
+        color: white;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+
+    form {
+        margin-bottom: 25px;
+        padding: 15px;
+        background-color: #87D37C;
+        display: inline-block;
+        width: 100%;
+        max-width: 340px;
+        border-radius: 5px;
+    }
+
+    input {
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    input[type=submit] {
+        font-size: 16px;
+        border-radius: 3px;
+        background-color: #E4F1FE;
+        border: 1px solid grey;
+        box-shadow: 2px 2px #999;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #FFFEC4;
+    }
+
+    code {
+        font-family: monospace;
+        font-size: 1.2em;
+        background-color: #333333;
+        padding: 2px;
+    }
+</style>
+</body>
+</html>
